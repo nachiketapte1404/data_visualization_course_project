@@ -7,15 +7,13 @@ import geopandas as gpd
 
 st.set_page_config(
     page_title='Global Disaster Atlas',
-    page_icon = 'assets/icons/atlas_icon.png',
+    page_icon = 'streamlit_dashboard/assets/icons/atlas_icon.png',
     layout='wide',
     initial_sidebar_state='collapsed'
 )
 st.title('Main Dashboard')
-st.sidebar.image('assets/icons/atlas_icon.png')
-st.sidebar.success('Select a disaster type or click on main dashboard for a quick overview')
 
-df = pd.read_csv('assets/dataset/cleaned_data.csv')
+df = pd.read_csv('streamlit_dashboard/assets/dataset/cleaned_data.csv')
 
 st.write(df.head())
 st.write('# Chloropleth Map based on Disaster')
